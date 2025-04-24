@@ -1,0 +1,122 @@
+#intro{
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.bg{
+    width: 40%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    position: relative;
+    right: 0;
+    top: auto;
+    z-index: 1;
+    transition: transform 1s ease;
+}
+
+.bg:hover {
+    transform: rotate(360deg);
+}
+
+.IntroContent{
+    height: auto;
+    width: 60%;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.hello{
+    font-size: 1.25rem;
+    font-weight: 100;
+    color: black;
+}
+
+.introName{
+    color: rgb(137, 36, 168);
+    
+    
+}
+
+.introPara{
+    font-size: 1.3rem;
+    font-weight:200;
+    letter-spacing: 2px; 
+    color: black;
+}
+
+.introText{
+    font-weight: 200;
+    font-size: 2rem;
+    max-width: 50rem;
+    padding: 1rem;
+    
+}
+
+@media screen and (max-width:840px) {
+    #intro {
+        flex-direction: column;
+        padding: 2rem;
+        height: auto;
+        min-height: calc(100vh - 4rem);
+    }
+
+    .IntroContent {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .bg {
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem auto;
+        transition: none;
+        height: auto;
+        max-height: none;
+    }
+
+    .bg:hover {
+        transform: none;
+    }
+
+    .introContent {
+        font-size: 10vw;
+    }
+
+    .hello {
+        font-size: 4.5vw;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .bg {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+    
+    .IntroContent {
+        padding: 0.5rem;
+    }
+    
+    .introText {
+        font-size: 1.5rem;
+    }
+    
+    .introPara {
+        font-size: 1rem;
+    }
+}

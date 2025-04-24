@@ -1,0 +1,222 @@
+#project {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.projectTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.projectCard {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+}
+
+.projectContent {
+    padding: 1.5rem;
+}
+
+.projectName {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.projectDesc {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.projectImage {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.projectImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.techStack {
+    margin-top: 1rem;
+}
+
+.techStack h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.techList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech {
+    background: #888787;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    #project {
+        padding: 2rem 1rem;
+    }
+
+    .projectsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .projectCard {
+        max-width: 100%;
+    }
+}
+
+.projectText{
+    font-weight: 200;
+    font-size: 2rem;
+    max-width: 50rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.techText{
+    font-size: 2rem;
+    font-weight: 100;
+    margin-left: 1rem;
+    
+}
+
+.atlas1{
+    object-fit: cover;
+    height: 20rem;
+    margin: 0.5rem;
+    border-radius: 11%;
+    justify-content: center;
+    align-content: center;
+}
+
+.facebook1{
+        object-fit: cover;
+        height: 20rem;
+        margin: 0.5rem;
+        border-radius: 11%;
+        justify-content: center;
+        align-content: center; 
+}
+
+.amazon{
+        object-fit: cover;
+        height: 20rem;
+        margin: 0.5rem;
+        border-radius: 11%;
+        justify-content: center;
+        align-content: center; 
+}
+
+.starkapp{
+    object-fit: cover;
+    height: 20rem;
+    width: 20rem;
+    margin: 0.5rem;
+    border-radius: 11%;
+    justify-content: center;
+    align-content: center;
+}
+.techusedText{
+    margin: 0.1rem;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline ;
+    justify-content: center;
+    
+}
+
+.techusedtext,.techused2text, .techused3text, .techused4text, .techused5text{
+    display: inline-flex;
+    margin: 0.5rem;
+    border-radius: 3rem;
+    background-color: rgb(90, 92, 91);
+}
+
+.gentobox1{
+    object-fit: fill;
+    height: 20rem;
+    width: 35rem;
+    margin: 0.5rem;
+    border-radius: 11%;
+}
+
+@media screen and (max-width:720px) {
+    .atlas1{
+        object-fit: cover;
+        position: relative;
+        height: 17rem;
+        width: 18rem;
+        border-radius: 20%; 
+    }
+    .gentobox1{
+        object-fit: fill;
+        position: relative;
+        height: 17rem;
+        width: 18rem;
+        border-radius: 20%; 
+    }
+    .facebook1{
+        object-fit: cover;
+        position: relative;
+        height: 17rem;
+        width: 18rem;
+        border-radius: 20%;
+    }
+    .amazon{
+        object-fit: cover;
+        position: relative;
+        height: 17rem;
+        width: 18rem;
+        border-radius: 20%;
+    }
+    .starkapp{
+        object-fit: cover;
+        position:relative;
+        height: 17rem;
+        width: 18rem;
+        border-radius: 20%;
+    }
+}
+
