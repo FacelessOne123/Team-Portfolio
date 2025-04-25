@@ -59,11 +59,11 @@ const Project = () => {
       <div className="techStack">
       <h4>Technologies used</h4>
     <div className="techList">
-      <span className="tech">HTML</span>
+      <span className="tech">C++</span>
       <span className="tech">PHP</span>
-      <span className="tech">FIGMA</span>
-      <span className="tech">MYSQL</span>
-      <span className="tech">TAILWIND CSS</span>
+      <span className="tech">PYTHON</span>
+      <span className="tech">ERLANG</span>
+      <span className="tech">JAVASCRIPT</span>
     </div>
     </div>
     </div>
@@ -79,11 +79,11 @@ const Project = () => {
     <div className="techStack">
       <h4>Technologies used</h4>
     <div className="techList">
-      <span className="tech">HTML</span>
-      <span className="tech">PHP</span>
-      <span className="tech">FIGMA</span>
-      <span className="tech">MYSQL</span>
-      <span className="tech">TAILWIND CSS</span>
+      <span className="tech">C++</span>
+      <span className="tech">JAVA</span>
+      <span className="tech">RUBY</span>
+      <span className="tech">NODE.JS</span>
+      <span className="tech">JAVASCRIPT</span>
     </div>
     </div>
     </div>
@@ -99,8 +99,8 @@ const Project = () => {
     <div className="techStack">
       <h4>Technologies used</h4>
     <div className="techList">
-      <span className="tech">HTML</span>
-      <span className="tech">PHP</span>
+      <span className="tech">C++</span>
+      <span className="tech">PYTHON</span>
       <span className="tech">FIGMA</span>
       <span className="tech">MYSQL</span>
       <span className="tech">TAILWIND CSS</span>
