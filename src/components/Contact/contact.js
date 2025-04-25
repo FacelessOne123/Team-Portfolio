@@ -18,6 +18,16 @@ const Contact = () => {
     setIsHighlighted(inView);
   }, [inView]);
 
+  useEffect(() => {
+    if (resultMessage) {
+      const timer = setTimeout(() => {
+        setResultMessage('');
+        setIsError(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [resultMessage]);
+
   const sendEmail = (e) => {
     e.preventDefault();
     setResultMessage('');
