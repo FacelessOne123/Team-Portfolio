@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    background: linear-gradient(135deg, #0cdceb 0%, #2d2d2d 100%);
+    border-radius: 2rem;
 }
 
 .bg{
@@ -36,12 +38,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center; 
+    color: #ffffff;
 }
 
 .hello{
-    font-size: 1.25rem;
-    font-weight: 100;
-    color: black;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 
 .introName{
@@ -51,18 +56,51 @@
 }
 
 .introPara{
-    font-size: 1.3rem;
-    font-weight:200;
-    letter-spacing: 2px; 
-    color: black;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-top: 2rem;
+    max-width: 90%;
 }
 
-.introText{
-    font-weight: 200;
-    font-size: 2rem;
-    max-width: 50rem;
-    padding: 1rem;
-    
+
+.wrapper{
+    display:inline-block
+}
+
+.wrapper:after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    margin-left: -0.1em;
+    animation: blink 1s infinite step-end;
+}
+
+
+.introText {
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: block;
+    min-height: 3.5rem;
+    margin: 1rem 0;
+    color: #ffd700;
+    text-align: left;
+    width: 100%;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes typing {
+    from {width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent; }
 }
 
 @media screen and (max-width:840px) {
@@ -71,12 +109,31 @@
         padding: 2rem;
         height: auto;
         min-height: calc(100vh - 4rem);
+        border-radius: 1.5rem;
     }
 
     .IntroContent {
         width: 100%;
         text-align: center;
         padding: 1rem;
+    }
+
+    .introText {
+        font-size: 2rem;
+        min-height: 2.8rem;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .introPara {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 1.5rem auto;
+        max-width: 100%;
+    }
+
+    .hello {
+        font-size: 1.3rem;
     }
 
     .bg {
@@ -91,17 +148,14 @@
     .bg:hover {
         transform: none;
     }
-
-    .introContent {
-        font-size: 10vw;
-    }
-
-    .hello {
-        font-size: 4.5vw;
-    }
 }
 
 @media screen and (max-width:620px) {
+    #intro {
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+    
     .bg {
         width: 100%;
         max-width: 100%;
@@ -114,9 +168,28 @@
     
     .introText {
         font-size: 1.5rem;
+        min-height: 2.2rem;
+        margin: 0.5rem 0;
     }
     
     .introPara {
         font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #intro {
+        border-radius: 0.8rem;
+        padding: 1rem;
+    }
+    .introText {
+        font-size: 1.2rem;
+        min-height: 1.8rem;
+        margin: 0.3rem 0;
+    }
+
+    .hello {
+        font-size: 1.1rem;
     }
 }

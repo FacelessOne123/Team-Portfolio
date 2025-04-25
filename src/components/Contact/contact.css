@@ -1,5 +1,5 @@
 #contact{
-    min-height: calc(100vh - 4rem);
+    min-height: 80vh;
     width: 100vw;
     max-width: 60rem;
     margin: 0 auto;
@@ -8,64 +8,80 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    position: relative;
     
 }
 
 .contactTitle{
     font-size: 4rem;
     font-weight: 100;
-    margin: 2rem 0;
-    color: rgb(214, 197, 100);
-    padding-top: 1rem;
-    margin-bottom: 1rem;
+    color: rgb(243, 228, 19);
+    margin-bottom: 1.5rem;
 }
+
 .contactText{
-    padding-bottom: .50rem;
-    font-size:  1.15rem;
+    color: white;
+    font-size: 1.2rem;
     font-weight: 300;
-    
+    margin-bottom: 3rem;
 }
 
 .contactForm{
-    margin: 1rem;
+    width: 90vw;
+    max-width: 35rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 90vw;
-    max-width: 60rem;
-    padding-top: 2rem;
+    gap: 1.5rem;
 }
 
 .name, .email, .msg{
     font-size: medium;
     width: 100%;
-    max-width: 40rem;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color:black;
+    max-width: 35rem;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    color: black;
     border: none;
     border-radius: 0.5rem;
-    background:rgb(179, 230, 250);
+    background: rgb(179, 230, 250);
+}
+
+.msg {
+    min-height: 150px;
+    resize: vertical;
 }
 
 .submitBtn{
     background: white;
     border: none;
     border-radius: 0.5rem;
-    margin: 3rem;
+    margin: 2rem 0;
     padding: 0.75rem 3.5rem;
     color: black;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
 }
 
 .submitBtn:hover{
     transform: scale(1.1);
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.link{
+    object-fit: fill;
+    height: 3rem;
+    width: 3rem;
+    margin: 0 0.75rem;
 }
 
 .result-message {
@@ -76,7 +92,6 @@
     text-align: center;
     width: 100%;
     max-width: 40rem;
-    box-sizing: border-box;
 }
 
 .result-message.success {
@@ -89,16 +104,4 @@
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
-}
-
-.links{
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.link{
-    object-fit: fill;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.75rem;
 }

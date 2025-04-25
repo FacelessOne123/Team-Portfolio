@@ -1,12 +1,22 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './contact.css';
 import fblogo from '../../assets/fblogo.png';
 import emailjs from '@emailjs/browser';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
   const form = useRef();
   const [resultMessage, setResultMessage] = useState('');
   const [isError, setIsError] = useState(false);
+  const [isHighlighted, setIsHighlighted] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false
+  });
+
+  useEffect(() => {
+    setIsHighlighted(inView);
+  }, [inView]);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -29,7 +39,7 @@ const Contact = () => {
        );
   };
   return (
-    <section id="contact">
+    <section id="contact" ref={ref} className={isHighlighted ? 'highlighted' : ''}>
       <h1 className="contactTitle">Contact Us</h1>
       <span className="contactText">We are glad to answer your questions!</span>
       <form className='contactForm' ref={form} onSubmit={sendEmail}>

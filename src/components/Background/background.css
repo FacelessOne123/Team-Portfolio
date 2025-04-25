@@ -1,33 +1,98 @@
-#background{
-    overflow: hidden;
+#background {
+    height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 65rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    
+    
+}
+
+.backgroundContent {
+    height: auto;
+    width: 100%;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 5rem;
+    color: #ffffff;
 }
 
-.backgroundTitle{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2.2rem; ;
-    font-weight: 700;
-    margin: -20rem;
-    color: rgb(0, 0, 0);
-    padding-bottom: 1rem;
-    padding-top: 30rem;
+.backgroundTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #750d15;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.backgroundDesc{
-    font-weight: 200;
-    font-size: 2rem;
-    max-width: 50rem;
-    padding: 4.5rem;
+.backgroundDesc {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #0a0a0a;
+    line-height: 1.8;
+    max-width: 90%;
+    text-align: center;
+}
+
+@media screen and (max-width:840px) {
+    #background {
+        padding: 2rem;
+        height: auto;
+        min-height: calc(100vh - 4rem);
+        border-radius: 1.5rem;
+    }
+
+    .backgroundContent {
+        padding: 1rem;
+    }
+
+    .backgroundTitle {
+        font-size: 2rem;
+    }
+
+    .backgroundDesc {
+        font-size: 1.1rem;
+        margin: 1.5rem auto;
+    }
+}
+
+@media screen and (max-width:620px) {
+    #background {
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
     
+    .backgroundContent {
+        padding: 0.5rem;
+    }
+    
+    .backgroundTitle {
+        font-size: 1.8rem;
+    }
+    
+    .backgroundDesc {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #background {
+        border-radius: 0.8rem;
+        padding: 1rem;
+    }
+
+    .backgroundTitle {
+        font-size: 1.5rem;
+    }
 }
 
 

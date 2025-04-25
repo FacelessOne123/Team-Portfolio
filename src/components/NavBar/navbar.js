@@ -1,4 +1,3 @@
-
 import './navbar.css';
 import menu from '../../assets/menu.png';
 import { Link } from 'react-scroll';
@@ -16,7 +15,7 @@ const Navbar = () => {
       <Link activeClass='active' to='background' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">About us</Link>
       <Link activeClass='active' to='members' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Member</Link>
       <Link activeClass='active' to='project' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Project</Link>
-      <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Contact</Link>
+      <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500} spyThreshold={0.3} className="desktopMenuListItem">Contact</Link>
     </div>
   
             
@@ -26,7 +25,7 @@ const Navbar = () => {
                 <Link activeClass='active' to='background' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>About us</Link>
                 <Link activeClass='active' to='members' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Member</Link>
                 <Link activeClass='active' to='project' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Project</Link>
-                <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</Link>
+                <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500} spyThreshold={0.3} className="listItem" onClick={()=>setShowMenu(false)}>Contact</Link>
             </div>
    </nav>
   );
