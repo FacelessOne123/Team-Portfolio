@@ -1,22 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './contact.css';
 import fblogo from '../../assets/fblogo.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const [resultMessage, setResultMessage] = useState('');
+  const [isError, setIsError] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
+    setResultMessage('');
+    setIsError(false);
 
     emailjs.sendForm('service_ax3vk8u', 'template_nst3vsq', form.current, {
         publicKey: 'oF2B7AOSIYhGREEFo',})
       .then((result) => {
             console.log(result.text);
             e.target.reset();
-            alert('Email Sent!');
+            setResultMessage('Email sent successfully!');
+            setIsError(false);
           },
           (error) => {
            console.log('FAILED...', error.text);
+           setResultMessage('Failed to send email. Please try again.');
+           setIsError(true);
          },
        );
   };
@@ -29,6 +37,11 @@ const Contact = () => {
           <input type="email" className="email" placeholder='Your Email' name='emails' required />
           <textarea className="msg" name="message" rows="5" placeholder='Your Message' required></textarea>
           <button type='submit' value='Send' className="submitBtn">Submit</button>
+          {resultMessage && (
+            <div className={`result-message ${isError ? 'error' : 'success'}`}>
+              {resultMessage}
+            </div>
+          )}
           <div className="links">
           <a href="https://www.facebook.com/profile.php?id=61575498847885" target="_blank" rel="noopener noreferrer">
           <img src={fblogo} alt="facebook Logo" className="link"/>
